@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using Unity.Services.Core;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Purchasing;
 using UnityEngine.Purchasing.Extension;
 using UnityEngine.UI;
@@ -8,7 +9,6 @@ using UnityEngine.UI;
 public class MyIAP : MonoBehaviour, IDetailedStoreListener
 {
     IStoreController m_StoreController; // The Unity Purchasing system.
-
     void Start()
     {
         InitializePurchasing();
@@ -25,42 +25,73 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
         builder.AddProduct("buycoin3", ProductType.Consumable);
         builder.AddProduct("buycoin4", ProductType.Consumable);
         builder.AddProduct("buycoin5", ProductType.Consumable);
+        builder.AddProduct("buycoin6", ProductType.Consumable);
 
         UnityPurchasing.Initialize(this, builder);
     }
-    //�����õģ���ʽ�����ɾ��
-    public void BuyDimaond1()
-    {
-        BuyProduct("buycoin1");
-    }
-    //�����õģ���ʽ�����ɾ��
-    public void BuyDimaond2()
-    {
-        BuyProduct("buycoin2");
-    }
-    //����ʱ���õĽӿڣ��ⲿֻ�������һ���ӿڼ���
+
+
     public void BuyProduct(string pruductid)
     {
-        //��ʼ����
-        m_StoreController.InitiatePurchase(m_StoreController.products.WithID(pruductid));
+        var product= m_StoreController.products.WithID(pruductid);
+
+        m_StoreController.InitiatePurchase(product);
     }
 
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
     {
-        //��ʼ���ɹ�
         Debug.Log("In-App Purchasing successfully initialized");
         m_StoreController = controller;
+
+        // 在初始化完成后获取商品信息
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var trans= transform.GetChild(i);
+            
+            SetProduct(trans.GetComponent<Button>(), "buycoin"+(i+1));
+        }
+    }
+
+    public void SetProduct(Button btn,string product1)
+    {
+        Product product = m_StoreController.products.WithID(product1);
+
+        // Product product = m_StoreController.products.WithID("buycoin1");
+
+        if (product != null && product.metadata != null)
+        {
+            // 获取本地化价格字符串（如 "$4.99" 或 "€4.99"）
+            string localizedPrice = product.metadata.localizedPriceString;
+    
+            // 获取货币代码（如 "USD"、"EUR"、"JPY"）
+            string currencyCode = product.metadata.isoCurrencyCode;
+            var txt= btn.transform.Find("txt");
+            if (txt)
+            {
+                txt.GetComponent<Text>().text = localizedPrice;
+            }
+            btn.onClick.AddListener((() =>
+            {
+                BuyProduct(product1);
+            }));
+            // 显示到UI
+            // priceText.text = localizedPrice; 
+        }
+        else
+        {
+            Debug.LogError("no p:"+product1);
+        }
     }
 
     public void OnInitializeFailed(InitializationFailureReason error)
     {
-        //��ʼ��ʧ��
+        Debug.Log("In-App Purchasing OnInitializeFailed"+error);
+
         OnInitializeFailed(error, null);
     }
 
     public void OnInitializeFailed(InitializationFailureReason error, string message)
     {
-        //��ʼ��ʧ��
         var errorMessage = $"Purchasing failed to initialize. Reason: {error}.";
 
         if (message != null)
@@ -77,13 +108,6 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
         var product = args.purchasedProduct;
 
         //Add the purchased product to the players inventory
-        //����ɹ���֪ͨ����������
-        //�˴���Ҫ��������߼���֪ͨ�Լ��ķ���������������߾�ʡ���ˡ�
-        /*
-         ***
-         ***
-         ***
-         */
         Debug.Log($"Purchase Complete - Product: {product.definition.id}");
 
         //We return Complete, informing IAP that the processing on our side is done and the transaction can be closed.
@@ -92,13 +116,11 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
 
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
     {
-        //����ʧ��
         Debug.Log($"Purchase failed - Product: '{product.definition.id}', PurchaseFailureReason: {failureReason}");
     }
 
     public void OnPurchaseFailed(Product product, PurchaseFailureDescription failureDescription)
     {
-        //����ʧ��
         Debug.Log($"Purchase failed - Product: '{product.definition.id}'," +
             $" Purchase failure reason: {failureDescription.reason}," +
             $" Purchase failure details: {failureDescription.message}");
