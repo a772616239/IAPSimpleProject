@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class MyIAP : MonoBehaviour, IDetailedStoreListener
 {
     IStoreController m_StoreController; // The Unity Purchasing system.
+    public Text text;
     void Start()
     {
         InitializePurchasing();
@@ -22,10 +23,10 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
         //��ʼ����Ʒ�б�����Ҫ��IOS��Google��̨�Ĳ�Ʒ�б�һ��
         builder.AddProduct("buycoin1", ProductType.Consumable);
         builder.AddProduct("buycoin2", ProductType.Consumable);
-        builder.AddProduct("buycoin3", ProductType.Consumable);
-        builder.AddProduct("buycoin4", ProductType.Consumable);
-        builder.AddProduct("buycoin5", ProductType.Consumable);
-        builder.AddProduct("buycoin6", ProductType.Consumable);
+        // builder.AddProduct("buycoin3", ProductType.Consumable);
+        // builder.AddProduct("buycoin4", ProductType.Consumable);
+        // builder.AddProduct("buycoin5", ProductType.Consumable);
+        // builder.AddProduct("buycoin6", ProductType.Consumable);
 
         UnityPurchasing.Initialize(this, builder);
     }
@@ -42,7 +43,7 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
     {
         Debug.Log("In-App Purchasing successfully initialized");
         m_StoreController = controller;
-
+        text.text = "In-App Purchasing successfully initialized";
         // 在初始化完成后获取商品信息
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -86,6 +87,7 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
     public void OnInitializeFailed(InitializationFailureReason error)
     {
         Debug.Log("In-App Purchasing OnInitializeFailed"+error);
+        text.text = "In-App Purchasing OnInitializeFailed"+error;
 
         OnInitializeFailed(error, null);
     }
@@ -93,6 +95,7 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
     public void OnInitializeFailed(InitializationFailureReason error, string message)
     {
         var errorMessage = $"Purchasing failed to initialize. Reason: {error}.";
+        text.text = $"Purchasing failed to initialize. Reason: {error}.";
 
         if (message != null)
         {
@@ -109,6 +112,7 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
 
         //Add the purchased product to the players inventory
         Debug.Log($"Purchase Complete - Product: {product.definition.id}");
+        text.text = $"Purchase Complete - Product: {product.definition.id}";
 
         //We return Complete, informing IAP that the processing on our side is done and the transaction can be closed.
         return PurchaseProcessingResult.Complete;
@@ -116,6 +120,8 @@ public class MyIAP : MonoBehaviour, IDetailedStoreListener
 
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
     {
+        text.text = $"Purchase failed - Product: '{product.definition.id}', PurchaseFailureReason: {failureReason}";
+
         Debug.Log($"Purchase failed - Product: '{product.definition.id}', PurchaseFailureReason: {failureReason}");
     }
 
