@@ -52,9 +52,7 @@
     <Compile Include="Assets/Scripts/admob/AdMobTest.cs" />
     <None Include="Assets/GoogleMobileAds/GoogleMobileAds_version-8.7.0_manifest.txt" />
     <None Include="Assets/Resources/BillingMode.json" />
-    <None Include="Assets/temp/AndroidManifest.xml" />
     <None Include="Assets/GoogleMobileAds/link.xml" />
-    <None Include="Assets/StreamingAssets/UnityServicesProjectConfiguration.json" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
