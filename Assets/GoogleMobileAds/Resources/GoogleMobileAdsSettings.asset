@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adMobAndroidAppId: ca-app-pub-7190878445602510~2691915551
   adMobIOSAppId: 
+  delayAppMeasurementInit: 0
   enableKotlinXCoroutinesPackagingOption: 1
-  disableOptimizeInitialization: 0
-  disableOptimizeAdLoading: 0
+  optimizeInitialization: 0
+  optimizeAdLoading: 0
   userTrackingUsageDescription: 
-  userLanguage: en
+  validateGradleDependencies: 0

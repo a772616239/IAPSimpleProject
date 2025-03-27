@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Editor/ReporterEditor.cs" />
-    <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.185_manifest.txt" />
+    <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.177_manifest.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -286,11 +286,14 @@
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Newtonsoft.Json">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
@@ -301,20 +304,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.PackageManagerResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandler">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.VersionHandlerImpl.dll</HintPath>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
@@ -322,17 +313,26 @@
     <Reference Include="GoogleMobileAds.Ump.Unity">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.JarResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.IOSResolver.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.177/Google.PackageManagerResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.177/Google.JarResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.177/Google.VersionHandlerImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.177/Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -715,6 +715,9 @@
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -750,9 +753,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>

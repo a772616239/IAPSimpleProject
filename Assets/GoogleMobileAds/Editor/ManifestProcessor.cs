@@ -131,15 +131,18 @@ public class ManifestProcessor : IPreprocessBuild
 
         SetMetadataElement(elemApplication,
                            metas,
+                           METADATA_DELAY_APP_MEASUREMENT_INIT,
+                           instance.DelayAppMeasurementInit);
+
+        SetMetadataElement(elemApplication,
+                           metas,
                            METADATA_OPTIMIZE_INITIALIZATION,
-                           !instance.DisableOptimizeInitialization,
-                           true);
+                           instance.OptimizeInitialization);
 
         SetMetadataElement(elemApplication,
                            metas,
                            METADATA_OPTIMIZE_AD_LOADING,
-                           !instance.DisableOptimizeAdLoading,
-                           true);
+                           instance.OptimizeAdLoading);
 
         SetMetadataElement(elemApplication,
                            metas,

@@ -45,15 +45,16 @@
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/ReporterGUI.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/MultiKeyDictionary.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Reporter.cs" />
+    <Compile Include="Assets/Scripts/admob/RewardedAdController.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/ReporterMessageReceiver.cs" />
     <Compile Include="Assets/Scripts/MyIAP.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Test/TestReporter.cs" />
     <Compile Include="Assets/Scripts/admob/AdMobTest.cs" />
-    <Compile Include="Assets/Scripts/admob/RewardedAdController.cs" />
+    <None Include="Assets/GoogleMobileAds/GoogleMobileAds_version-8.7.0_manifest.txt" />
     <None Include="Assets/Resources/BillingMode.json" />
     <None Include="Assets/temp/AndroidManifest.xml" />
     <None Include="Assets/GoogleMobileAds/link.xml" />
-    <None Include="Assets/GoogleMobileAds/GoogleMobileAds_version-10.0.0_manifest.txt" />
+    <None Include="Assets/StreamingAssets/UnityServicesProjectConfiguration.json" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -276,14 +277,14 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="GoogleMobileAds">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Unity">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
@@ -669,6 +670,9 @@
     <Reference Include="UnityEngine.Purchasing.SecurityStub">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -704,9 +708,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
