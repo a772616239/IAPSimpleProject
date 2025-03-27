@@ -42,6 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Editor/ReporterEditor.cs" />
+    <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.185_manifest.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -299,6 +300,39 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.PackageManagerResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.VersionHandlerImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.JarResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.IOSResolver.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -728,6 +762,10 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{a88f1d6f-7bba-7be3-4844-ef9c5e5c113d}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{08a5e562-75c9-1b73-899d-880daf6d1f13}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

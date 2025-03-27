@@ -48,8 +48,12 @@
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/ReporterMessageReceiver.cs" />
     <Compile Include="Assets/Scripts/MyIAP.cs" />
     <Compile Include="Assets/Unity-Logs-Viewer/Reporter/Test/TestReporter.cs" />
-    <Compile Include="Assets/Samples/In App Purchasing/4.12.2/01 Buying Consumables/BuyingConsumables.cs" />
+    <Compile Include="Assets/Scripts/admob/AdMobTest.cs" />
+    <Compile Include="Assets/Scripts/admob/RewardedAdController.cs" />
     <None Include="Assets/Resources/BillingMode.json" />
+    <None Include="Assets/temp/AndroidManifest.xml" />
+    <None Include="Assets/GoogleMobileAds/link.xml" />
+    <None Include="Assets/GoogleMobileAds/GoogleMobileAds_version-10.0.0_manifest.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -274,6 +278,24 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -691,6 +713,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="GoogleMobileAds.Editor.csproj">
+      <Project>{08a5e562-75c9-1b73-899d-880daf6d1f13}</Project>
+      <Name>GoogleMobileAds.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

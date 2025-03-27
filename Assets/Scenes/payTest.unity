@@ -1098,6 +1098,7 @@ GameObject:
   - component: {fileID: 685874037}
   - component: {fileID: 685874036}
   - component: {fileID: 685874035}
+  - component: {fileID: 685874039}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1177,12 +1178,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 993209717}
-  - {fileID: 1393663374}
-  - {fileID: 228547806}
-  - {fileID: 1379775765}
-  - {fileID: 21706239}
-  - {fileID: 44863873}
+  - {fileID: 1646423088}
+  - {fileID: 59026667}
   - {fileID: 1953956098}
   - {fileID: 2040237384}
   m_Father: {fileID: 0}
@@ -2939,6 +2936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cefdab6581bf36f4289740b0660203a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 2040237385}
 --- !u!1 &1820079465
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3080,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 685874038}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2040237383
 GameObject:
@@ -3114,7 +3112,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 685874038}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

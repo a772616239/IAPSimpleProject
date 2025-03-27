@@ -41,16 +41,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettings.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/BuildPreProcessor.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/Utils.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/PListProcessor.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/EditorLocalization.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/EditorLocalizationData.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/GradleProcessor.cs" />
     <Compile Include="Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettingsEditor.cs" />
-    <Compile Include="Assets/GoogleMobileAds/Editor/EditorPathUtils.cs" />
     <Compile Include="Assets/GoogleMobileAds/Editor/ManifestProcessor.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/Utils.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/EditorLocalizationData.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/BuildPreProcessor.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/GoogleMobileAdsSettings.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/EditorLocalization.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/PListProcessor.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/GradleProcessor.cs" />
+    <Compile Include="Assets/GoogleMobileAds/Editor/EditorPathUtils.cs" />
     <None Include="Assets/GoogleMobileAds/Editor/GoogleMobileAdsSKAdNetworkItems.xml" />
     <None Include="Assets/GoogleMobileAds/Editor/GoogleUmpDependencies.xml" />
     <None Include="Assets/GoogleMobileAds/Editor/GoogleMobileAds.Editor.asmdef" />
@@ -299,17 +299,23 @@
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>/Applications/Unity/Hub/Editor/2020.3.48f1c1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Google.PackageManagerResolver">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.PackageManagerResolver.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="GoogleMobileAds.Ump.Unity">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    <Reference Include="log4netPlastic">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.PackageManagerResolver">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.PackageManagerResolver.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.dll</HintPath>
@@ -317,32 +323,26 @@
     <Reference Include="GoogleMobileAds.Unity">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Plastic.Antlr3.Runtime">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Google.VersionHandler">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Ump.Unity">
+      <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="Google.JarResolver">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.JarResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="log4netPlastic">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/ExternalDependencyManager/Editor/1.2.185/Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>/Users/wangxufeng/IAPSimpleProject/Library/PackageCache/com.unity.collab-proxy@2.5.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
       <HintPath>/Users/wangxufeng/IAPSimpleProject/Assets/GoogleMobileAds/GoogleMobileAds.Ump.dll</HintPath>
